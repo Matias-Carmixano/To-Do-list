@@ -1,24 +1,31 @@
-import logo from './logo.svg';
+import styled from 'styled-components';
 import './App.css';
+import { ToDoList } from './Components/ToDoList';
+
+const Box = styled.div`
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    background-color: #2b2d42;
+    height: 80vh;
+    width: 20%;
+    margin: 0 auto;
+    margin-top:50px;
+    gap: 10px;
+`
+
+
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Box>
+     <ToDoList/>
+      </Box>     
+
+    </>
   );
 }
 
